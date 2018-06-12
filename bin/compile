@@ -6,7 +6,7 @@ set -ueo pipefail
 
 PATH="$PWD/node-v10.4.0-linux-x64/bin:$PATH"
 node -v
-npx meep-cli build "$1" "$2"
+npx jdxcode/meep build "$1" "$2"
 
 echo "DONE"
 exit 10
