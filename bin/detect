@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
 
-echo 'heroku-cli'
+echo 'meep'
 exit 0
