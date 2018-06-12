@@ -4,7 +4,7 @@
 # fail fast
 set -ueo pipefail
 
-./bin/node-v10.4.0-linux-x64 ./bin/compile.js "$1" "$2"
+./node-v10.4.0-linux-x64/bin/node ./bin/compile.js "$1" "$2"
 
 echo "DONE"
 exit 10
