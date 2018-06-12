@@ -4,11 +4,7 @@
 # fail fast
 set -ueo pipefail
 
-echo $(pwd)
-echo "$1"
-echo "$2"
-
-ls
 ./bin/node-v10.4.0-linux-x64 ./bin/compile.js "$1" "$2"
 
-# exit 10
+echo "DONE"
+exit 10
