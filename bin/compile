@@ -13,6 +13,8 @@ ENV_DIR=${3:-}
 WHITELIST=${2:-''}
 BLACKLIST=${3:-'^(GIT_DIR|PYTHONHOME|LD_LIBRARY_PATH|LIBRARY_PATH|PATH)$'}
 
+ls $ENV_DIR
+
 # shellcheck source=stdlib
 . ./bin/stdlib
 
