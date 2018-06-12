@@ -8,6 +8,7 @@ echo $(pwd)
 echo "$1"
 echo "$2"
 
-/build/bin/node-v10.4.0-linux-x64 /build/bin/compile.js "$1" "$2"
+ls
+./bin/node-v10.4.0-linux-x64 ./bin/compile.js "$1" "$2"
 
 exit 10
