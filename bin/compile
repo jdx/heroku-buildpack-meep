@@ -4,6 +4,13 @@
 # fail fast
 set -ueo pipefail
 
+# shellcheck disable=SC2034
+BUILD_DIR=${1:-}
+# shellcheck disable=SC2034
+CACHE_DIR=${2:-}
+# shellcheck disable=SC2034
+ENV_DIR=${3:-}
+
 # shellcheck source=stdlib
 . ./bin/stdlib
 export_env
