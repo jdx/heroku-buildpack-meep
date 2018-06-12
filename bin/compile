@@ -9,4 +9,3 @@ export NPM_CONFIG_CACHE="$2/npm"
 npx jdxcode/meep build "$1" "$2"
 
 echo "DONE"
-exit 10
