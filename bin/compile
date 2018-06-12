@@ -13,14 +13,15 @@ ENV_DIR=${3:-}
 WHITELIST=${2:-''}
 BLACKLIST=${3:-'^(GIT_DIR|PYTHONHOME|LD_LIBRARY_PATH|LIBRARY_PATH|PATH)$'}
 
-ls $ENV_DIR
-
 # shellcheck source=stdlib
 . ./bin/stdlib
 
 PATH="$PWD/node-v10.4.0-linux-x64/bin:$PATH"
 export NPM_CONFIG_CACHE="$2/npm"
 
-sub_env npx jdxcode/meep build "$1" "$2" "$3"
+env
+export_env "$ENV_DIR" "$WHITELIST" "$BLACKLIST"
+env
+npx jdxcode/meep build "$1" "$2" "$3"
 
 echo "DONE"
