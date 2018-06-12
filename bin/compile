@@ -16,14 +16,15 @@ export_env_dir() {
   whitelist_regex=${2:-''}
   blacklist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
   if [ -d "$env_dir" ]; then
-    for e in "$env_dir"/*; do
+    # shellcheck disable=SC2045
+    for e in $(ls "$env_dir"); do
+      # shellcheck disable=SC2086
       echo "$e" | grep -E "$whitelist_regex" | grep -qvE "$blacklist_regex" &&
-      export "$e=$(cat "$env_dir/$e")"
+      export "$e=$(cat $env_dir/$e)"
       :
     done
   fi
 }
-
 # shellcheck source=stdlib
 . ./bin/stdlib
 
