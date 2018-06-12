@@ -4,4 +4,8 @@
 # fail fast
 set -ueo pipefail
 
-/build/bin/node-v10.4.0-linux-x64 /build/bin/compile.js "$1"
+echo $(pwd)
+echo "$1"
+echo "$2"
+
+/build/bin/node-v10.4.0-linux-x64 /build/bin/compile.js "$1" "$2"
