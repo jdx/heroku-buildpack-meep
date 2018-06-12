@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+# fail fast
+set -ueo pipefail
+
+/build/bin/node-v10.4.0-linux-x64 /build/bin/compile.js "$1"
