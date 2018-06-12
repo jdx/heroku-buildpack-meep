@@ -5,8 +5,8 @@
 set -ueo pipefail
 
 PATH="$PWD/node-v10.4.0-linux-x64/bin:$PATH"
-node -v
+export NPM_CONFIG_CACHE=$2
 npx jdxcode/meep build "$1" "$2"
 
 echo "DONE"
-exit 10
+# exit 10
